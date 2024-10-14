@@ -16,6 +16,7 @@
 """1. Feladat
 Írj egy programot, amely kiírja a páros számokat 1 és 10 között!
 """
+import random
 
 # szam = 1
 # while szam <= 10:
@@ -51,12 +52,28 @@
 Írj egy programot, amely a felhasználótól páros számot kér be. Amennyiben a megadott szám páratlan, újra és 
 újra megtörténik az adatbekérés mindaddig, amíg végül páros számot nem ad meg a felhasználó.
 """
-folytat = True
 
-while folytat == True:
-    user_input = int(input("Írj egy páros számot: "))
-    if user_input % 2 == 0:
-        print("Köszönöm szépen.")
-        folytat = False
+# folytat = True
+#
+# while folytat == True:
+#     user_input = int(input("Írj egy páros számot: "))
+#     if user_input % 2 == 0:
+#         print("Köszönöm szépen.")
+#         folytat = False
 
+"""6. Feladat
+Írj egy programot, amely [1;12] intervallumon állít elő 20 darab véletlenszámot! A képernyőre kizárólag csak 
+a 3-mal oszthatóakat írja ki, és a végén informálja a felhasználót arról is, hány darab ilyen szám volt.
+"""
 
+osszes_szam = 0
+oszthato_harom = 0
+
+while osszes_szam < 20:
+    szam = random.randint(1, 12)
+    osszes_szam += 1
+    if szam % 3 == 0:
+        oszthato_harom += 1
+        print(szam)
+
+print(f"\nA 12-ből, {oszthato_harom} szám osztható 3-mal.")
