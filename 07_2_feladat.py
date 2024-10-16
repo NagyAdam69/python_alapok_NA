@@ -33,11 +33,11 @@ O . . . . . O
 . O . . . O .
 O . . . . . O"""
 
-for i in range(7):
-    for j in range(7):
-        if i == j:
-            print("0 ", end="")
-        elif i + j == 6:
+
+size = int(input("Kérlek adj meg egy számot!: "))
+for i in range(size):
+    for j in range(size):
+        if i == j or i + j == size - 1:
             print("0 ", end="")
         else:
             print(". ", end="")
