@@ -92,15 +92,16 @@ for ciklust a számok bekérésére, és egy if feltételt a legnagyobb szám me
 8. Prímszám ellenőrzés
 Kérj be egy számot, és döntsd el, hogy prímszám-e vagy sem. A program akkor jelezze, ha prímszámot talált, és akkor is, ha nem az.
 """
-while True:
-    szam = int(input("Adjon meg egy számot: "))
-    if szam <= 1:  # 1-nél kisebb szám nem lehet prím
-        print("Ez a szám nem prímszám.")
-    for i in range(2, int(szam**0.5)+1):
-        if szam % i == 0:
+def nyolcadik_feladat():
+    while True:
+        szam = int(input("Adjon meg egy számot: "))
+        if szam <= 1:  # 1-nél kisebb szám nem lehet prím
             print("Ez a szám nem prímszám.")
-        else:
-            print("Ez a szám prímszám.")
+        for i in range(2, int(szam**0.5)+1):
+            if szam % i == 0:
+                print("Ez a szám nem prímszám.")
+            else:
+               print("Ez a szám prímszám.")
 
 """
 9. Piramis rajzolása csillagokkal
@@ -111,11 +112,20 @@ Kérj be egy számot, amely megadja a piramis magasságát, majd rajzolj ki egy 
  *******
 *********
 
-
 """
-
+def kilencedik_feladat():
+    magassag = int(input("Add meg a piramis magasságát: "))
+    for i in range(1, magassag + 1):
+        csillagok = '*' * (2 * i - 1)
+        print(csillagok.center(2 * magassag - 1))
 
 """
 10. Szorzótábla mátrix formában
-Készíts egy programot, amely kiírja az 1-től 10-ig terjedő szorzótáblát egy 10x10-es mátrix formájában. Minden sor egy-egy i értéket képviseljen, minden oszlop pedig egy j értéket, és az i * j szorzatot jelenítse meg.
+Készíts egy programot, amely kiírja az 1-től 10-ig terjedő szorzótáblát egy 10x10-es mátrix formájában. 
+Minden sor egy-egy i értéket képviseljen, minden oszlop pedig egy j értéket, és az i * j szorzatot jelenítse meg.
 """
+def tizedik_feladat():
+    for i in range(1, 11):
+        for j in range(1, 11):
+                print(f"{i} * {j} = {i * j}" , end="  ")
+        print()
